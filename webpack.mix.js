@@ -1,7 +1,7 @@
 let mix = require('laravel-mix');
 
 mix.setPublicPath('./')
-.sass('src/scss/app.scss', 'dist/css')
+.sass('assets/sass/popup.scss', 'dist/css')
 .options({
     processCssUrls: false
 })
