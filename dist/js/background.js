@@ -4,3 +4,11 @@ chrome.runtime.onInstalled.addListener(() => {
         toggleSitesList: 'example.com',
     }, () => {});
 });
+
+let toggleSitesActive = false;
+let toggleSitesList = 'example.com';
+
+chrome.storage.sync.get(['toggleSitesActive', 'toggleSitesList'], (result) => {
+    toggleSitesActive = result.toggleSitesActive;
+    toggleSitesList = result.toggleSitesList;
+});
